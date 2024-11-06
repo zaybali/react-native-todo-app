@@ -27,6 +27,10 @@ export default function Helloworld() {
     counter > 0 && setCounter(counter - 1);
   }
 
+  const resetCounter = () => {
+    setCounter(0);
+  }
+
   useEffect(() => {
     console.log(todo);
   }, [todoList])
@@ -90,6 +94,12 @@ export default function Helloworld() {
             >Minus</Text>
           </TouchableOpacity>
 
+          <TouchableOpacity
+            onPress={resetCounter}
+          >
+            <Text style={{ fontWeight: 700, fontSize: 20, color: 'navy' }}
+            >Reset</Text>
+          </TouchableOpacity>
         </View>
 
       </View>
